@@ -1,0 +1,20 @@
+call plug#begin()
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'chiendo97/intellij.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'inkarkat/vim-ReplaceWithRegister'
+Plug 'hashivim/vim-terraform'
+Plug 'itchyny/vim-gitbranch'
+Plug 'christoomey/vim-system-copy'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-syntastic/syntastic'
+Plug 'mhinz/vim-signify'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'lambdalisue/battery.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+call plug#end()
