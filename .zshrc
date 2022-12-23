@@ -105,7 +105,7 @@ alias n="nvim"
 
 ## GoLang vars
 export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go@1.18/libexec
+export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -115,3 +115,7 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
+# ASDF
+. /usr/local/opt/asdf/libexec/asdf.sh
+

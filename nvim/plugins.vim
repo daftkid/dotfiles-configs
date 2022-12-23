@@ -1,20 +1,51 @@
 call plug#begin()
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'chiendo97/intellij.vim'
+
+" syntax-related plugins (highlighters, checkers, etc.)
+Plug 'vim-syntastic/syntastic'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Golang development plugins
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'preservim/nerdtree'
+
+" status line plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'inkarkat/vim-ReplaceWithRegister'
+
+" terraform-related plugins
 Plug 'hashivim/vim-terraform'
-Plug 'itchyny/vim-gitbranch'
-Plug 'christoomey/vim-system-copy'
+Plug 'juliosueiras/vim-terraform-completion'
+
+" git tools and helpers
+Plug 'mhinz/vim-signify' " inplace diff
 Plug 'tpope/vim-fugitive'
-Plug 'vim-syntastic/syntastic'
-Plug 'mhinz/vim-signify'
+Plug 'itchyny/vim-gitbranch' " get current git branch name
+
+" system helperes
+Plug 'christoomey/vim-system-copy'
+
+" Filesystem exploration
+Plug 'preservim/nerdtree'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-lua/plenary.nvim' " telescope requirements
 Plug 'vim-ctrlspace/vim-ctrlspace'
-Plug 'lambdalisue/battery.vim'
+
+" quick edits and cuts
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary' " comment and uncomment via gcc
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
+Plug 'inkarkat/vim-ReplaceWithRegister'
+
+" autocompletion
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+"color themes
+Plug 'chiendo97/intellij.vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
