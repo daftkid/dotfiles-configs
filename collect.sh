@@ -4,10 +4,10 @@ echo "Starting collection... 📂"
 
 files=(
 	"${HOME}/.tmux.conf"
-	"${HOME}/.dir_colors"
 	"${HOME}/.gitconfig"
 	"${HOME}/.zshrc"
 	"${HOME}/.config/nvim"
+	"${HOME}/.p10k.zsh"
 
 )
 

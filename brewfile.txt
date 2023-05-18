@@ -1,0 +1,57 @@
+# Terminal
+tmux
+iterm2
+zsh-syntax-highlighting
+timewarrior
+
+# Clouds
+awscli
+aws-shell
+gcloud
+
+# Terraform tools
+terragrunt
+terraform
+tfsec
+terraform-ls
+tflint
+terraform-docs
+
+# Editors
+nvim
+
+# Version managers
+asdf
+
+# Pkg managers
+poetry
+npm
+
+# Containers
+helm
+kubernetes-cli
+minikube
+kubectx
+kubens
+
+# Development
+golang
+pyenv
+ruby
+
+# Misc
+ack
+yaml
+ripgrep
+wrk
+asciinema
+wget
+htop
+tree
+jq
+gpg
+telnet
+
+# Menu bar
+time-out
+stats

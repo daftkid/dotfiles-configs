@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " terraform-related plugins
 Plug 'hashivim/vim-terraform'
-Plug 'juliosueiras/vim-terraform-completion'
+" Plug 'juliosueiras/vim-terraform-completion'
 
 " git tools and helpers
 Plug 'mhinz/vim-signify' " inplace diff
@@ -43,6 +43,12 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+
+" js
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+" readme preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "color themes
 Plug 'chiendo97/intellij.vim'
