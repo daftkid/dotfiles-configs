@@ -48,6 +48,7 @@ brew "tree"
 brew "jq"
 brew "gpg"
 brew "telnet"
+brew "stylua"
 
 # Menu bar
 cask "time-out"
