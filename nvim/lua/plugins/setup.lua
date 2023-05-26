@@ -51,17 +51,21 @@ lazy.setup({
 			require("plugins.lualine")
 		end,
 	},
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-	},
+	{'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+  },
 	{
 		"nvim-tree/nvim-web-devicons",
 		config = function()
 			require("plugins.devicons")
 		end,
 	},
+
+	-- Thenes
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -79,9 +83,14 @@ lazy.setup({
 	},
 
 	-- git tools and helpers
-	{ "mhinz/vim-signify" },
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("plugins.gitsigns")
+		end,
+	},
 	{ "tpope/vim-fugitive" },
-	{ "itchyny/vim-gitbranch" },
+	-- { "itchyny/vim-gitbranch" },
 
 	-- system helpers
 	{ "christoomey/vim-system-copy" },
@@ -107,7 +116,15 @@ lazy.setup({
 	},
 
 	-- Quick edits and cuts
-	{ "tpope/vim-surround" },
+	{
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("plugins.nvim-surround")
+    end,
+},
+	-- { "tpope/vim-surround" },
 	{ "tpope/vim-commentary" },
 	{ "tpope/vim-surround" },
 	{ "tpope/vim-repeat" },
@@ -119,6 +136,8 @@ lazy.setup({
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-cmdline" },
+	{ "hrsh7th/vim-vsnip" },
+	{ "hrsh7th/vim-vsnip-integ" },
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()

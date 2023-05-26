@@ -4,7 +4,7 @@ require("defaults")
 require("plugins.setup")
 -- for some reason when I'm doing the same command with Lazy config, it is flacky from time to time and not started properly
 -- so I need to define it here
-require("bufferline").setup({})
+require("plugins.barbar")
 
 vim.cmd.syntax("on")
 vim.cmd([[hi Normal guibg=None ctermbg=None]])
