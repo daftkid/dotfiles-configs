@@ -111,7 +111,8 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-WORDCHARS='~!#$%^&*(){}[]<>?+;'
+WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
+# WORDCHARS='~!#$%^&*(){}[]<>?+;'
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/libpq/bin:$PATH"

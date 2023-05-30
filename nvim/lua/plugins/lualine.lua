@@ -1,5 +1,6 @@
 local setup, lualine = pcall(require, "lualine")
 if not setup then
+	print("lualine is not installed!")
 	return
 end
 

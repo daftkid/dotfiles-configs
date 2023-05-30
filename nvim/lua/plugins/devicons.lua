@@ -1,5 +1,6 @@
 local present, devicons = pcall(require, "nvim-web-devicons")
 if not present then
+	print("devicons is not installed!")
 	return
 end
 

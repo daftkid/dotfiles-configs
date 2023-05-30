@@ -33,7 +33,6 @@ lazy.setup({
 			require("plugins.syntastic")
 		end,
 	},
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
 	-- Golang development plugins
 	{
@@ -51,13 +50,16 @@ lazy.setup({
 			require("plugins.lualine")
 		end,
 	},
-	{'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-    },
-    init = function() vim.g.barbar_auto_setup = false end,
-  },
+	{
+		"romgrk/barbar.nvim",
+		dependencies = {
+			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		},
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+	},
 	{
 		"nvim-tree/nvim-web-devicons",
 		config = function()
@@ -117,31 +119,58 @@ lazy.setup({
 
 	-- Quick edits and cuts
 	{
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    config = function()
-        require("plugins.nvim-surround")
-    end,
-},
-	-- { "tpope/vim-surround" },
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("plugins.nvim-surround")
+		end,
+	},
+	{ "folke/which-key.nvim", opts = {} },
 	{ "tpope/vim-commentary" },
-	{ "tpope/vim-surround" },
+	-- { "tpope/vim-surround" },
 	{ "tpope/vim-repeat" },
-	{ "inkarkat/vim-ReplaceWithRegister" }, -- ???
+	-- { "inkarkat/vim-ReplaceWithRegister" }, -- ???
 
-	-- Autocompletion
-	{ "neovim/nvim-lspconfig" },
+	-- Autocompletion and LSPs
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			-- Automatically install LSPs to stdpath for neovim
+			{ "williamboman/mason.nvim", config = true },
+			{
+				"williamboman/mason-lspconfig.nvim",
+				config = function()
+					require("plugins.mason")
+				end,
+			},
+
+			-- Useful status updates for LSP
+			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+			{ "j-hui/fidget.nvim", opts = {} },
+
+			-- Additional lua configuration, makes nvim stuff amazing!
+			"folke/neodev.nvim",
+		},
+	},
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/vim-vsnip" },
+	{ "L3MON4D3/LuaSnip", version = "1.*" },
 	{ "hrsh7th/vim-vsnip-integ" },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("plugins.treesitter")
+		end,
+	},
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
-			require("plugins.cmp-configs")
+			require("plugins.cmp")
 		end,
 	},
 
