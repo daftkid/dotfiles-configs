@@ -8,7 +8,6 @@ files=(
 	"${HOME}/.zshrc"
 	"${HOME}/.config/nvim"
 	"${HOME}/.p10k.zsh"
-
 )
 
 function copy_file() {

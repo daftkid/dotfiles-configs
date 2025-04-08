@@ -1,7 +1,7 @@
 [user]
 	email = alexandr.mykytenko@gmail.com
 	name = Oleksandr Mykytenko
-	signingkey = 4A678EE89F6B2252
+	signingkey = F50367AF2FE145BD
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

@@ -2,7 +2,7 @@
 brew "tmux"
 cask "iterm2"
 brew "zsh-syntax-highlighting"
-brew "timewarrior"
+# brew "timewarrior"
 
 # Clouds
 brew "awscli"
@@ -24,13 +24,14 @@ brew "asdf"
 
 # # Pkg managers
 brew "poetry"
-# brew "npm"
+brew "npm"
 
 # # Containers
 brew "helm"
 brew "kubernetes-cli"
 brew "minikube"
 brew "kubectx"
+brew "derailed/k9s/k9s"
 
 # # Development
 brew "golang"
@@ -49,7 +50,8 @@ brew "jq"
 brew "gpg"
 brew "telnet"
 brew "stylua"
+brew "dos2unix"
 
 # Menu bar
-cask "time-out"
+# cask "time-out"
 cask "stats"

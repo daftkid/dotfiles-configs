@@ -1,7 +1,16 @@
-local present, gitsigns = pcall(require, "gitsigns")
-if not present then
-	print("gitsigns is not installed!")
-	return
-end
-
-gitsigns.setup()
+return {
+  "lewis6991/gitsigns.nvim",
+  config = function()
+    local plugin = require 'gitsigns'
+    local config = {
+        signs = {
+          add = { text = "+" },
+          change = { text = "~" },
+          delete = { text = "_" },
+          topdelete = { text = "‾" },
+          changedelete = { text = "~" },
+        },
+      }
+      plugin.setup(config)
+  end,
+}
