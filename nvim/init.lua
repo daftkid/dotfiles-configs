@@ -36,6 +36,7 @@ require('lazy').setup({
   require 'plugins.surround',
   require 'plugins.syntastic',
   require 'plugins.autopairs',
+  require 'plugins.marks',
 
 })
 
