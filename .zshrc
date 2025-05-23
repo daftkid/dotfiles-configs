@@ -35,10 +35,9 @@ source $ZSH/oh-my-zsh.sh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
 
 prompt_context(){}
-ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path]='none'
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
 
 #### ALIASES ####
 # git
@@ -73,7 +72,6 @@ alias h="helm"
 alias v="vault"
 alias myip="curl -s ifconfig.me | pbcopy"
 
-alias kcns="kubectl config view --minify --output 'jsonpath={..namespace}'"
 alias ll="ls -al"
 
 # EDITORS
@@ -83,17 +81,21 @@ alias n="nvim"
 
 ## GoLang vars
 export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-
-# ASDF
-. /usr/local/opt/asdf/libexec/asdf.sh
 
 export TFLINT_CONFIG_FILE=~/.terraform.d/.tflint.hcl
 export TERRAGRUNT_PROVIDER_CACHE=1
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+export PATH="`python3 -m site --user-base`/bin:$PATH"
+alias awsume=". awsume"
+
+# ASDF
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# k9s
+export K9S_CONFIG_DIR="${HOME}/.config/k9s"
