@@ -99,3 +99,6 @@ alias awsume=". awsume"
 
 # k9s
 export K9S_CONFIG_DIR="${HOME}/.config/k9s"
+
+# to fix the concurrent runs of TF on Apple chip
+export GODEBUG=asyncpreemptoff=1
